@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headless Form Lib</title>
+  </head>
+  <body>
+    <div id="app" style="max-width: 800px; margin: 0 auto; padding: 40px 0;"></div>
+    <script type="module">
+      import { mountApp } from '/src/main.ts';
+      mountApp('#app', {
+        structure: "/src/sample.json",
+        updateURL: "/dummy",
+        formId: 1,
+        csrfToken: "",
+      });
+    </script>
+  </body>
+</html>
